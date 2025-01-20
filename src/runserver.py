@@ -22,7 +22,7 @@ buttons = {
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
-    bot.reply_to(message,text="welcome")
+    bot.reply_to(message,text="welcome \n /getip \n /withdraw \n /start")
 @bot.message_handler(commands=['getip'])
 def send_ip(message):
     bot.reply_to(message,text=f"{get_ip()}")
