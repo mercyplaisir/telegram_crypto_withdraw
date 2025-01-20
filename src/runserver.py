@@ -3,6 +3,9 @@ import os
 from func.withdrawal import binance_withdraw
 from func.ip import get_ip
 
+from dotenv import load_dotenv
+load_dotenv()
+
 API_TOKEN = os.getenv('TELEGRAMKEY')
 
 bot = telebot.TeleBot(API_TOKEN)

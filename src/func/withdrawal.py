@@ -1,5 +1,9 @@
 import ccxt	
 import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
 bin_obj = ccxt.binance(
     {
         "apiKey":os.getenv("BINANCEPUBLICKEY"),
