@@ -42,17 +42,18 @@ def ask_receiver_address(message):
 def ask_withdrawal_amount(message):
     withdraw_request_data["amount"] = message.text
     print(withdraw_request_data)
-    bot.reply_to(message=message,text=f"would you like to wihdraw to \n address : {withdraw_request_data["address"]}\namount: {withdraw_request_data["amount"]}TRX\nyes/no")
+    bot.reply_to(message=message,text=f"would you like to wihdraw to \n address : {withdraw_request_data['address']}\namount: {withdraw_request_data['amount']}TRX\nyes/no")
 
     bot.register_next_step_handler(message,ask_withdrawal_approuval)
 
 def ask_withdrawal_approuval(message):
     if "yes" in message.text.lower():
-        binance_withdraw(amount=withdraw_request_data["amount"],
-                         address=withdraw_request_data["address"])
+        binance_withdraw(amount=withdraw_request_data['amount'],
+                         address=withdraw_request_data['address'])
     bot.register_next_step_handler(message,send_welcome)
 
-    
+
+
 
 
 bot.infinity_polling()
