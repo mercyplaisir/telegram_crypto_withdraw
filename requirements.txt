@@ -15,6 +15,7 @@ propcache==0.2.1
 pycares==4.5.0
 pycparser==2.22
 pyTelegramBotAPI==4.26.0
+python-dotenv==1.0.1
 requests==2.32.3
 setuptools==75.8.0
 telebot==0.0.5
